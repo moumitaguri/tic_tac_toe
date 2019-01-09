@@ -3,7 +3,7 @@ const winningCombinations = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 
 const player1 = prompt("enter 1st player's name");
 const player2 = prompt("enter 2nd player's name")
 
-let images = ["/tic_tac_toe/cross.png", "/tic_tac_toe/zero.png"];
+let images = ["cross.png", "zero.png"];
 let symbols = ["X", "O"];
 let bgColors = ["darkorange", "darkcyan"];
 let count = 1;
