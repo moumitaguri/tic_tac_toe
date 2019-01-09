@@ -17,13 +17,14 @@ const positions = {
 }
 
 let players = [player1, player2];
+let playing = ["1st player", "2nd player"]
 
 const getCurrentPlayer = function (id) {
   if ((player1 == "" || player2 == "") || player1 == player2) {
     players[0] = "player1";
     players[1] = "player2";
   }
-  document.getElementById("currentPlayer").innerText = players[count % 2] + " has placed " + symbols[count % 2] + " at " + id
+  document.getElementById("currentPlayer").innerText = playing[count % 2] + " : " + players[count % 2] + " has placed " + symbols[count % 2] + " at " + id
 }
 
 const doesInclude = function (list) {
@@ -78,11 +79,9 @@ const startGame = function (event) {
 
 const showResult = function (positions, id) {
   if (hasWon(positions)) {
-    alert(players[count % 2] + " has won");
-    // document.getElementById("result").innerText = players[count % 2] + " has won"
+    alert(playing[count%2] + " : " + players[count % 2] + " has won");
   }
   if (count == 10 && !hasWon(positions)) {
     alert("match is Draw!!");
-    // document.getElementById("result").innerText = "match is draw!!"
   }
 }
